@@ -1,6 +1,9 @@
 ﻿using DoadoresDeSangue.Domain.ValueObjects;
 using SangueBom.Domain.Enums;
 using SangueBom.Domain.ValueObjects;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Security.Cryptography;
+using System.Net.NetworkInformation;
 
 namespace SangueBom.Domain.Entities
 {
@@ -15,7 +18,10 @@ namespace SangueBom.Domain.Entities
         public Endereco Endereco { get; private set; }
         public string Telefone { get; private set; }
 
+
         public int Idade => CalcularIdade(DataNascimento);
+
+        public object CPF { get; internal set; }
 
         public Doador(string nome, CPF cpf, DateTime dataNascimento, Genero genero, TipoSanguineo tipoSanguineo, Endereco endereco, string telefone)
         {
@@ -31,9 +37,10 @@ namespace SangueBom.Domain.Entities
             DataNascimento = dataNascimento;
             Genero = genero;
             TipoSanguineo = tipoSanguineo;
-            Endereco = endereco;
+            Endereco = endereco; // Certifique-se de que o objeto Endereco é válido
             Telefone = telefone;
         }
+
 
         private int CalcularIdade(DateTime nascimento)
         {
@@ -43,6 +50,14 @@ namespace SangueBom.Domain.Entities
             if (nascimento.Date > hoje.AddYears(-idade)) idade--;
 
             return idade;
+        }
+
+        private void CadastrarDoador(string rua, string numero, string bairro, string cidade, string estado)
+        {
+            Endereco = new Endereco(rua, numero, bairro, cidade, estado);
+
+            Console.WriteLine($"Doador: {Nome}, CPF: {Cpf}, Data de Nascimento: {DataNascimento:dd/MM/yyyy}, Tipo Sanguíneo: {TipoSanguineo}, Gênero: {Genero}, Idade: {Idade}, Telefone: {Telefone}");
+            Console.WriteLine($"Endereço: Rua {Endereco.Rua}, Número {Endereco.Numero}, Bairro {Endereco.Bairro}, Cidade {Endereco.Cidade}, Estado {Endereco.Estado}");
         }
     }
 }

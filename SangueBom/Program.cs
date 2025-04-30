@@ -1,6 +1,17 @@
+using SangueBom.Application.Services;
 using SangueBom.Components;
+using SangueBom.Domain.Interfaces;
+using SangueBom.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<ICadastroDoadorRepositorio, CadastroDoadorRepositorio>();
+
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+
+builder.Services.AddScoped<ICadastroDoadorRepositorio, CadastroDoadorRepositorio>();
+builder.Services.AddScoped<CadastroDoador>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

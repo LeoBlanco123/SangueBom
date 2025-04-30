@@ -17,5 +17,5 @@
             Estado = estado;
         }
     }
-
 }
+

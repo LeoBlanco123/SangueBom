@@ -1,7 +1,32 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\SangueBom\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|c:\\users\\rafaelarosa\\desktop\\sanguebom\\sanguebom\\components\\pages\\cadastro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|solutionrelative:sanguebom\\components\\pages\\cadastro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|c:\\users\\rafaelarosa\\desktop\\sanguebom\\sanguebom\\domain\\services\\cadastrodoador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|solutionrelative:sanguebom\\domain\\services\\cadastrodoador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|c:\\users\\rafaelarosa\\desktop\\sanguebom\\sanguebom\\domain\\repositories\\icadastrodoadorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|solutionrelative:sanguebom\\domain\\repositories\\icadastrodoadorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|c:\\users\\rafaelarosa\\desktop\\sanguebom\\sanguebom\\infrastructure\\persistence\\cadastrodoadorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|solutionrelative:sanguebom\\infrastructure\\persistence\\cadastrodoadorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B9AD71E-DA62-4206-9CC1-56C6E8E966F2}|TestProject1\\TestProject1.csproj|c:\\users\\rafaelarosa\\desktop\\sanguebom\\testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B9AD71E-DA62-4206-9CC1-56C6E8E966F2}|TestProject1\\TestProject1.csproj|solutionrelative:testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|c:\\users\\rafaelarosa\\desktop\\sanguebom\\sanguebom\\domain\\enums\\tiposanguineoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|solutionrelative:sanguebom\\domain\\enums\\tiposanguineoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,15 +34,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TipoSanguineoEnum.cs",
+              "DocumentMoniker": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\Domain\\Enums\\TipoSanguineoEnum.cs",
+              "RelativeDocumentMoniker": "SangueBom\\Domain\\Enums\\TipoSanguineoEnum.cs",
+              "ToolTip": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\Domain\\Enums\\TipoSanguineoEnum.cs",
+              "RelativeToolTip": "SangueBom\\Domain\\Enums\\TipoSanguineoEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T20:20:55.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\TestProject1\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject1\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\TestProject1\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject1\\UnitTest1.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwHEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T20:11:39.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cadastro.razor",
+              "DocumentMoniker": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\Components\\Pages\\Cadastro.razor",
+              "RelativeDocumentMoniker": "SangueBom\\Components\\Pages\\Cadastro.razor",
+              "ToolTip": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\Components\\Pages\\Cadastro.razor",
+              "RelativeToolTip": "SangueBom\\Components\\Pages\\Cadastro.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-30T20:07:01.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CadastroDoadorRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\Infrastructure\\Persistence\\CadastroDoadorRepositorio.cs",
+              "RelativeDocumentMoniker": "SangueBom\\Infrastructure\\Persistence\\CadastroDoadorRepositorio.cs",
+              "ToolTip": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\Infrastructure\\Persistence\\CadastroDoadorRepositorio.cs",
+              "RelativeToolTip": "SangueBom\\Infrastructure\\Persistence\\CadastroDoadorRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T20:06:58.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CadastroDoador.cs",
+              "DocumentMoniker": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\Domain\\Services\\CadastroDoador.cs",
+              "RelativeDocumentMoniker": "SangueBom\\Domain\\Services\\CadastroDoador.cs",
+              "ToolTip": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\Domain\\Services\\CadastroDoador.cs",
+              "RelativeToolTip": "SangueBom\\Domain\\Services\\CadastroDoador.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAADwvzIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T20:06:56.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICadastroDoadorRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\Domain\\Repositories\\ICadastroDoadorRepositorio.cs",
+              "RelativeDocumentMoniker": "SangueBom\\Domain\\Repositories\\ICadastroDoadorRepositorio.cs",
+              "ToolTip": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\Domain\\Repositories\\ICadastroDoadorRepositorio.cs",
+              "RelativeToolTip": "SangueBom\\Domain\\Repositories\\ICadastroDoadorRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T20:06:55.195Z",
+              "EditorCaption": ""
             }
           ]
         }
