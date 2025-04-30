@@ -1,0 +1,48 @@
+﻿@page "/historico/{DoadorId:guid}"
+
+@using SangueBom.Domain.Repositories
+@using SangueBom.Domain.Entities
+@inject IDoacaoRepository DoacaoRepository
+
+<h3>Histórico de Doações</h3>
+
+@if (doacoes == null)
+{
+    <p>Carregando...</p>
+}
+else if (!doacoes.Any())
+{
+    <p>Este doador ainda não possui doações registradas.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Data da Doação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var (doacao, index) in doacoes.Select((d, i) => (d, i + 1)))
+            {
+                <tr>
+                    <td>@index</td>
+                    <td>@doacao.Data.ToString("dd/MM/yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter]
+    public Guid DoadorId { get; set; }
+
+    private List<Doacao>? doacoes;
+
+    protected override async Task OnInitializedAsync()
+    {
+        doacoes = await DoacaoRepository.ObterPorDoadorIdAsync(DoadorId);
+    }
+}

@@ -51,6 +51,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "bunit": {
+              "target": "Package",
+              "version": "[1.39.5, )"
+            },
+            "bunit.core": {
+              "target": "Package",
+              "version": "[1.39.5, )"
+            },
+            "bunit.web": {
+              "target": "Package",
+              "version": "[1.39.5, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.9.3, )"

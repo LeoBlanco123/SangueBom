@@ -7,14 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Application\UseCases\" />
-    <Folder Include="Domain\Repositories\" />
-    <Folder Include="Domain\Services\" />
     <Folder Include="Infrastructure\Validators\" />
     <Folder Include="Infrastructure\Persistence\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="bunit" Version="1.39.5" />
+    <PackageReference Include="bunit.core" Version="1.39.5" />
+    <PackageReference Include="bunit.web" Version="1.39.5" />
     <PackageReference Include="xunit" Version="2.9.3" />
   </ItemGroup>
 
