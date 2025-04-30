@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SangueBom.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SangueBom.h23ahh2wux.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SangueBom.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SangueBom.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SangueBom.props",
+      "PackagePath": "build\\SangueBom.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SangueBom.props",
+      "PackagePath": "buildMultiTargeting\\SangueBom.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SangueBom.props",
+      "PackagePath": "buildTransitive\\SangueBom.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
