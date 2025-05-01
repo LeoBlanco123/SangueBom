@@ -6,7 +6,7 @@
 @using SangueBom.Domain.Enums
 @rendermode InteractiveServer
 @inject ICadastroDoadorRepositorio _repositorio
-
+<link href="css/estilos.css" rel="stylesheet" />
 <h3>Cadastro de Novo Doador</h3>
 
 <form>
@@ -50,6 +50,11 @@
         </select>
     </div>
 
+    <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" class="form-control" @bind="Telefone" />
+    </div>
+
     <!-- Campos do Endereço -->
     <h4>Endereço</h4>
     <div class="form-group">
@@ -87,6 +92,7 @@
     private DateTime DataNascimento { get; set; } = DateTime.Today;
     private Genero GeneroSelecionado { get; set; }
     private string TipoSanguineo { get; set; }
+    private string Telefone { get; set; }
 
     private string Rua { get; set; }
     private string Numero { get; set; }
@@ -114,7 +120,6 @@
                 return;
             }
 
-            // Validação da idade mínima (18 anos)
             var idade = DateTime.Today.Year - DataNascimento.Year;
             if (DataNascimento > DateTime.Today.AddYears(-idade)) idade--;
 
@@ -127,16 +132,16 @@
 
             var tipoSanguineoEnum = Enum.Parse<TipoSanguineo>(TipoSanguineo.Replace("+", "Positivo").Replace("-", "Negativo"));
             Endereco = new Endereco(Rua, Numero, Bairro, Cidade, Estado);
-            DoadorCriado = new Doador(Nome, cpfObj, DataNascimento, GeneroSelecionado, tipoSanguineoEnum, Endereco, "11999999999");
+            DoadorCriado = new Doador(Nome, cpfObj, DataNascimento, GeneroSelecionado, tipoSanguineoEnum, Endereco, Telefone);
 
             await _repositorio.CadastrarAsync(DoadorCriado);
 
             Mensagem = $"Doador cadastrado com sucesso: {DoadorCriado.Nome}";
             MensagemClasseCss = "text-success";
         }
-        catch (ArgumentException)
+        catch (ArgumentException ex)
         {
-            Mensagem = "CPF inválido";
+            Mensagem = ex.Message;
             MensagemClasseCss = "text-danger";
         }
         catch (Exception ex)

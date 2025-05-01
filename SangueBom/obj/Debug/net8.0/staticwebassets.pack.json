@@ -1,23 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SangueBom.bundle.scp.css",
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SangueBom.bundle.scp.css",
       "PackagePath": "staticwebassets\\SangueBom.h23ahh2wux.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\wwwroot\\app.css",
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\RafaelaRosa\\Desktop\\SangueBom\\SangueBom\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
