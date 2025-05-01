@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Wz2snX8dw2hCWhiCz+rhkQN+lqbC1QDpjKoiV71HMyA=",
+  "Hash": "AWnPlDv797E8Oeyv9LB2NUEoDng5l9DdGJTGUkbBuYc=",
   "Source": "SangueBom",
   "BasePath": "_content/SangueBom",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\AuthenticationService.js",
+      "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\",
+      "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "RelativePath": "AuthenticationService.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "epbw58hwuq",
+      "Integrity": "Qlj6NGS978hjVyrYLtW5G6trKGerdW4Fwgvr2eUo/lU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\AuthenticationService.js"
+    },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SangueBom.styles.css",
       "SourceId": "SangueBom",
@@ -94,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bpk8xqwxhs",
-      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "Fingerprint": "6gzpyzhau4",
+      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
@@ -122,6 +143,27 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Identity": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\style.css",
+      "SourceId": "SangueBom",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\",
+      "BasePath": "_content/SangueBom",
+      "RelativePath": "css/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "clhtzyw1wu",
+      "Integrity": "sPY3cJsN9GPsYN7N+VqoVyoOlbo94NHlUdhbMM7SPGE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
       "Identity": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\favicon.png",
       "SourceId": "SangueBom",
       "SourceType": "Discovered",
@@ -145,6 +187,43 @@
   ],
   "Endpoints": [
     {
+      "Route": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js",
+      "AssetFile": "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\AuthenticationService.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "291499"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qlj6NGS978hjVyrYLtW5G6trKGerdW4Fwgvr2eUo/lU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Oct 2024 23:58:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qlj6NGS978hjVyrYLtW5G6trKGerdW4Fwgvr2eUo/lU="
+        }
+      ]
+    },
+    {
       "Route": "app.css",
       "AssetFile": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\app.css",
       "Selectors": [],
@@ -167,7 +246,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:13:37 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -204,7 +283,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:13:37 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -227,7 +306,7 @@
       ]
     },
     {
-      "Route": "bootstrap/bootstrap.min.bpk8xqwxhs.css",
+      "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
       "AssetFile": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -237,7 +316,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162720"
+          "Value": "162726"
         },
         {
           "Name": "Content-Type",
@@ -245,11 +324,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:13:37 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -259,7 +338,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "bpk8xqwxhs"
+          "Value": "6gzpyzhau4"
         },
         {
           "Name": "label",
@@ -267,7 +346,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
         }
       ]
     },
@@ -282,7 +361,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162720"
+          "Value": "162726"
         },
         {
           "Name": "Content-Type",
@@ -290,11 +369,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:13:37 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -304,7 +383,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
         }
       ]
     },
@@ -331,7 +410,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:13:37 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -376,7 +455,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:13:37 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -387,6 +466,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.clhtzyw1wu.css",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2613"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sPY3cJsN9GPsYN7N+VqoVyoOlbo94NHlUdhbMM7SPGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 12:51:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "clhtzyw1wu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sPY3cJsN9GPsYN7N+VqoVyoOlbo94NHlUdhbMM7SPGE="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2613"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sPY3cJsN9GPsYN7N+VqoVyoOlbo94NHlUdhbMM7SPGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 12:51:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sPY3cJsN9GPsYN7N+VqoVyoOlbo94NHlUdhbMM7SPGE="
         }
       ]
     },
@@ -413,7 +574,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:13:37 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -458,7 +619,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:13:37 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -495,7 +656,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:24:47 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -532,7 +693,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:24:47 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -577,7 +738,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:24:47 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -622,7 +783,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 12:24:47 GMT"
+          "Value": "Thu, 01 May 2025 11:58:15 GMT"
         },
         {
           "Name": "Cache-Control",

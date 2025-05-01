@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
