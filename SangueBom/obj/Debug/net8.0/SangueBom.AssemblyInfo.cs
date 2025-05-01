@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SangueBom")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac6e03e02949a06b64a4c34a05e71561dcdf1c7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecf334f2f4b6fbe98161ffe22373a3785c1327f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SangueBom")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SangueBom")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
