@@ -12,5 +12,12 @@
             DoadorId = doadorId;
             DataDoacao = DateTime.Today;
         }
+
+        public Doacao(Guid doadorId, DateTime dataDoacao)
+        {
+            Id = Guid.NewGuid();
+            DoadorId = doadorId;
+            DataDoacao = dataDoacao;
+        }
     }
 }

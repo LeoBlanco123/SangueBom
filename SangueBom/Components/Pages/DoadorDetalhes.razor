@@ -1,0 +1,101 @@
+﻿@page "/doadores"
+@using SangueBom.Domain.Entities
+@using SangueBom.Domain.Interfaces
+@using SangueBom.Domain.Services
+@using SangueBom.Domain.Repositories
+
+@inject ICadastroDoadorRepositorio DoadorRepo
+@inject IRepositorioDoacao DoacaoRepo
+
+@rendermode InteractiveServer
+
+<h3>Detalhes dos Doadores</h3>
+
+@if (!string.IsNullOrEmpty(GlobalMensagem))
+{
+    <div class="alert @GlobalMensagemCss">@GlobalMensagem</div>
+}
+
+@if (doadores == null)
+{
+    <p>Carregando...</p>
+}
+else if (doadores.Count == 0)
+{
+    <p>Nenhum doador encontrado.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var doador in doadores)
+            {
+                <tr>
+                    <td>@doador.Nome</td>
+                    <td>@doador.Cpf.Valor</td>
+                    <td>@doador.Telefone</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary"
+                                @onclick="() => RegistrarNovaDoacao(doador)">
+                            Registrar nova doação
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Doador> doadores;
+    private string GlobalMensagem;
+    private string GlobalMensagemCss;
+    private readonly ValidadorDeDoacaoService _validador = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        doadores = await DoadorRepo.ListarAsync();
+    }
+
+    private async Task RegistrarNovaDoacao(Doador doador)
+    {
+        // Buscar última doação
+        var historico = await DoacaoRepo.ObterPorDoadorIdAsync(doador.Id);
+        DateTime? dataUltima = historico
+            .OrderByDescending(d => d.DataDoacao)
+            .FirstOrDefault()?.DataDoacao;
+
+        var hoje = DateTime.Today;
+        bool pode = _validador.PodeRealizarDoacao(doador, dataUltima, hoje);
+
+        if (pode)
+        {
+            // registra hoje
+            var nova = new Doacao(doador.Id, hoje);
+            await DoacaoRepo.RegistrarAsync(nova);
+            GlobalMensagem = "Doação registrada com sucesso";
+            GlobalMensagemCss = "alert-success";
+        }
+        else
+        {
+            // Mensagem de intervalo
+            int diasPassados = dataUltima.HasValue
+                ? (int)(hoje - dataUltima.Value).TotalDays
+                : 0;
+            int minimo = doador.Genero == Domain.Enums.Genero.Masculino ? 60 : 90;
+            GlobalMensagem = $"Intervalo mínimo de {minimo} dias ainda não cumprido ({diasPassados} dias)";
+            GlobalMensagemCss = "alert-warning";
+        }
+
+        // Recarrega histórico caso queira atualizar contadores
+        // await OnInitializedAsync();
+    }
+}

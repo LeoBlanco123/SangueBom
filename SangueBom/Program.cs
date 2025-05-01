@@ -1,17 +1,16 @@
-using SangueBom.Application.Services;
 using SangueBom.Components;
 using SangueBom.Domain.Interfaces;
+using SangueBom.Domain.Repositories;
 using SangueBom.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<ICadastroDoadorRepositorio, CadastroDoadorRepositorio>();
+// Remova um dos registros duplicados
+builder.Services.AddSingleton<ICadastroDoadorRepositorio, CadastroDoadorRepositorio>();
+builder.Services.AddSingleton<IRepositorioDoacao, RepositorioDoacaoEmMemoria>();
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-
-builder.Services.AddScoped<ICadastroDoadorRepositorio, CadastroDoadorRepositorio>();
-builder.Services.AddScoped<CadastroDoador>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
