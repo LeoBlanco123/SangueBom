@@ -4,7 +4,9 @@ namespace SangueBom.Domain.Interfaces
 {
     public interface ICadastroDoadorRepositorio
     {
-        Task<Doador?> ObterPorCpfAsync(string cpf);
+        Task<List<Doador>> ListarAsync();
+        Task<Doador> ObterPorCpfAsync(string cpf);
         Task CadastrarAsync(Doador doador);
+        Task<Doador> ObterPorIdAsync(Guid doadorId);
     }
 }
