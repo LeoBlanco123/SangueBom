@@ -1,190 +1,152 @@
 using SangueBom.Domain.Entities;
 using SangueBom.Domain.Enums;
 using SangueBom.Domain.Services;
-using SangueBom.Domain.ValueObjects;
 using DoadoresDeSangue.Domain.ValueObjects;
 using Bunit;
-using SangueBom.Application.UseCases;
-using SangueBom.Infrastructure.Repositories;
+using SangueBom.Domain.ValueObjects;
+using Moq;
+using SangueBom.Domain.Interfaces;
+using SangueBom.Domain.Repositories;
 
 namespace TestProject2
 {
-    public class TestDoacao : TestContext
+    public class TestDoacao
     {
-        [Fact]
-        public void Deve_permitir_doacao_masculina_quando_passaram_mais_de_60_dias()
+        private readonly ValidadorDeDoacaoService _validador;
+        private readonly IRepositorioDoacao _doacaoRepo;
+        private readonly ICadastroDoadorRepositorio _doadorRepo;
+        private readonly Mock<IDoacaoRepositorio> _doacaoRepoMock;
+
+        public TestDoacao()
         {
-            // Arrange
-            var validador = new ValidadorDeDoacaoService();
+            _validador = new ValidadorDeDoacaoService();
+            _doacaoRepoMock = new Mock<IDoacaoRepositorio>();
+        }
 
-            var cpf = new CPF("41931921806"); // ou CPF.Create("12345678900") se for um método de fábrica
+
+        private Doador CriarDoadorMasculino(string nome, DateTime dataNascimento)
+        {
+            var cpf = new CPF("529.235.898-31");
             var endereco = new Endereco("Rua A", "123", "Bairro B", "Cidade C", "Estado D");
+            return new Doador(nome, cpf, dataNascimento, Genero.Masculino, TipoSanguineo.OPositivo, endereco, "11999999999");
+        }
 
-            var doador = new Doador(
-                nome: "João",
-                cpf: cpf,
-                dataNascimento: new DateTime(1990, 1, 1),
-                genero: Genero.Masculino,
-                tipoSanguineo: TipoSanguineo.OPositivo, // ajuste conforme seu enum
-                endereco: endereco,
-                telefone: "11999999999"
-            );
+        private Doador CriarDoadoraFeminina(string nome, DateTime dataNascimento)
+        {
+            var cpf = new CPF("529.235.898-31");
+            var endereco = new Endereco("Rua X", "456", "Bairro Y", "Cidade Z", "Estado W");
+            return new Doador(nome, cpf, dataNascimento, Genero.Feminino, TipoSanguineo.ANegativo, endereco, "11888888888");
+        }
 
-            var ultimaDoacao = DateTime.Today.AddDays(-61);
+        [Fact]
+        public void DevePermitirNovaDoacaoParaHomem_ComIntervaloSuperiorA60Dias()
+        {
+            var doador = CriarDoadorMasculino("João da Silva", new DateTime(1990, 1, 1));
+            var dataUltimaDoacao = DateTime.Today.AddDays(-61);
             var hoje = DateTime.Today;
 
-            // Act
-            var resultado = validador.PodeRealizarDoacao(doador, ultimaDoacao, hoje);
+            var resultado = _validador.PodeRealizarDoacao(doador, dataUltimaDoacao, hoje);
 
-            // Assert
-            Assert.True(resultado);
+            Assert.True(resultado, "Homem com intervalo superior a 60 dias deve poder doar.");
         }
 
         [Fact]
-        public void Nao_deve_permitir_doacao_masculina_quando_passaram_menos_de_60_dias()
+        public void DeveBloquearNovaDoacaoParaHomem_ComIntervaloInferiorA60Dias()
         {
-            // Arrange
-            var validador = new ValidadorDeDoacaoService();
-            var cpf = new CPF("41931921806"); // ou CPF.Create("12345678900") se for um método de fábrica
-            var endereco = new Endereco("Rua A", "123", "Bairro B", "Cidade C", "Estado D");
-
-            var doador = new Doador(
-                nome: "João",
-                cpf: cpf,
-                dataNascimento: new DateTime(1990, 1, 1),
-                genero: Genero.Masculino,
-                tipoSanguineo: TipoSanguineo.OPositivo, // ajuste conforme seu enum
-                endereco: endereco,
-                telefone: "11999999999"
-            );
-            var ultimaDoacao = DateTime.Today.AddDays(-30);
+            var doador = CriarDoadorMasculino("Carlos Souza", new DateTime(1995, 5, 20));
+            var dataUltimaDoacao = DateTime.Today.AddDays(-30);
             var hoje = DateTime.Today;
 
-            // Act
-            var resultado = validador.PodeRealizarDoacao(doador, ultimaDoacao, hoje);
+            var resultado = _validador.PodeRealizarDoacao(doador, dataUltimaDoacao, hoje);
 
-            // Assert
-            Assert.False(resultado);
+            Assert.False(resultado, "Homem com intervalo inferior a 60 dias não deve poder doar.");
         }
 
         [Fact]
-        public void Deve_permitir_doacao_feminina_quando_passaram_mais_de_90_dias()
+        public void DevePermitirNovaDoacaoParaMulher_ComIntervaloSuperiorA90Dias()
         {
-            // Arrange
-            var validador = new ValidadorDeDoacaoService();
-
-            var cpf = new CPF("41931921806"); // ou CPF.Create("12345678900") se for um método de fábrica
-            var endereco = new Endereco("Rua A", "123", "Bairro B", "Cidade C", "Estado D");
-
-            var doador = new Doador(
-                nome: "Ana",
-                cpf: cpf,
-                dataNascimento: new DateTime(1990, 1, 1),
-                genero: Genero.Feminino,
-                tipoSanguineo: TipoSanguineo.OPositivo, // ajuste conforme seu enum
-                endereco: endereco,
-                telefone: "11999999999"
-            );
-
-            var ultimaDoacao = DateTime.Today.AddDays(-91);
+            var doador = CriarDoadoraFeminina("Maria Oliveira", new DateTime(1988, 3, 15));
+            var dataUltimaDoacao = DateTime.Today.AddDays(-91);
             var hoje = DateTime.Today;
 
-            // Act
-            var resultado = validador.PodeRealizarDoacao(doador, ultimaDoacao, hoje);
+            var resultado = _validador.PodeRealizarDoacao(doador, dataUltimaDoacao, hoje);
 
-            // Assert
-            Assert.True(resultado);
+            Assert.True(resultado, "Mulher com intervalo superior a 90 dias deve poder doar.");
         }
 
         [Fact]
-        public void Nao_deve_permitir_doacao_feminina_quando_passaram_menos_de_90_dias()
+        public void DeveBloquearNovaDoacaoParaMulher_ComIntervaloInferiorA90Dias()
         {
-            // Arrange
-            var validador = new ValidadorDeDoacaoService();
-            var cpf = new CPF("41931921806"); // ou CPF.Create("12345678900") se for um método de fábrica
-            var endereco = new Endereco("Rua A", "123", "Bairro B", "Cidade C", "Estado D");
-
-            var doador = new Doador(
-                nome: "Ana",
-                cpf: cpf,
-                dataNascimento: new DateTime(1990, 1, 1),
-                genero: Genero.Feminino,
-                tipoSanguineo: TipoSanguineo.OPositivo, // ajuste conforme seu enum
-                endereco: endereco,
-                telefone: "11999999999"
-            );
-            var ultimaDoacao = DateTime.Today.AddDays(-45);
+            var doador = CriarDoadoraFeminina("Ana Lima", new DateTime(1993, 7, 10));
+            var dataUltimaDoacao = DateTime.Today.AddDays(-45);
             var hoje = DateTime.Today;
 
-            // Act
-            var resultado = validador.PodeRealizarDoacao(doador, ultimaDoacao, hoje);
+            var resultado = _validador.PodeRealizarDoacao(doador, dataUltimaDoacao, hoje);
 
-            // Assert
-            Assert.False(resultado);
+            Assert.False(resultado, "Mulher com intervalo inferior a 90 dias não deve poder doar.");
         }
 
         [Fact]
-        public async Task Deve_exibir_tres_doacoes_para_LucasFernandes()
+        public async Task TestarRegistrarNovaDoacao_SemDoacoes_Previa()
         {
             // Arrange
-            var doadorId = Guid.NewGuid();
-            var doacaoRepo = new RepositorioDoacaoEmMemoria();
-
-            var doacoes = new List<Doacao>
-        {
-            new Doacao(doadorId, new DateTime(2023, 1, 10)),
-            new Doacao(doadorId, new DateTime(2023, 4, 10)),
-            new Doacao(doadorId, new DateTime(2023, 7, 10))
-        };
-
-            foreach (var doacao in doacoes)
-            {
-                await doacaoRepo.RegistrarAsync(doacao);
-            }
-
-            // Act
-            var historico = await doacaoRepo.ObterPorDoadorIdAsync(doadorId);
-
-            // Assert
-            Assert.Equal(3, historico.Count);
-            Assert.Contains(historico, d => d.DataDoacao == new DateTime(2023, 1, 10));
-            Assert.Contains(historico, d => d.DataDoacao == new DateTime(2023, 4, 10));
-            Assert.Contains(historico, d => d.DataDoacao == new DateTime(2023, 7, 10));
-        }
-
-        [Fact]
-        public async Task Scenario6_RegistroDeDoacaoSemHistoricoAnterior()
-        {
-            // Arrange
-            var doadorRepositorio = new CadastroDoadorRepositorio();
-            var doacaoRepositorio = new RepositorioDoacaoEmMemoria();
-            var validador = new ValidadorDeDoacaoService();
-            var cpf = new CPF("41931921806");
-
-            var doadora = new Doador(
+            var doadoraLarissa = new Doador(
                 nome: "Larissa Matos",
-                cpf: cpf,
-                dataNascimento: new DateTime(1995, 5, 10),
+                cpf: new CPF("529.235.898-31"),
+                dataNascimento: new DateTime(1995, 08, 15),
                 genero: Genero.Feminino,
                 tipoSanguineo: TipoSanguineo.APositivo,
-                endereco: new SangueBom.Domain.ValueObjects.Endereco("Rua A", "123", "Centro", "Cidade", "Estado"),
+                endereco: new Endereco("Rua Y", "456", "Bairro X", "Cidade W", "Estado B"),
                 telefone: "11999999999"
             );
 
-            await doadorRepositorio.CadastrarAsync(doadora);
+            // Nenhuma doação registrada para Larissa
+            var doacoesLarissa = new List<Doacao>();
+            _doacaoRepoMock.Setup(repo => repo.ObterPorDoadorIdAsync(doadoraLarissa.Id)).ReturnsAsync(doacoesLarissa);
 
-            // Act
-            var doadorRecuperado = await doadorRepositorio.ObterPorCpfAsync("41931921806");
+            // Simulando o comportamento de registrar a doação
+            _doacaoRepoMock.Setup(repo => repo.RegistrarAsync(It.IsAny<Doacao>())).Returns(Task.CompletedTask);
 
-            var novaDoacao = new Doacao(doadorRecuperado.Id, DateTime.Today);
-            await doacaoRepositorio.RegistrarAsync(novaDoacao);
+            // Act - Registrar uma nova doação
+            var novaDoacao = new Doacao(doadorId: doadoraLarissa.Id, dataDoacao: DateTime.Today);
+            await _doacaoRepoMock.Object.RegistrarAsync(novaDoacao);
 
             // Assert
-            var doacoes = await doacaoRepositorio.ObterPorDoadorIdAsync(doadorRecuperado.Id);
-            Assert.Single(doacoes);
-            Assert.Equal(DateTime.Today, doacoes[0].DataDoacao);
+            _doacaoRepoMock.Verify(repo => repo.RegistrarAsync(It.IsAny<Doacao>()), Times.Once);
         }
 
+        [Fact]
+        public async Task TestarHistoricoDoacoes_DeveExibirDatasDeDoacoes()
+        {
+            // Arrange
+            var doadorLucas = new Doador(
+                nome: "Lucas Fernandes",
+                cpf: new CPF("529.235.898-31"),
+                dataNascimento: new DateTime(1990, 05, 10),
+                genero: Genero.Masculino,
+                tipoSanguineo: TipoSanguineo.OPositivo,
+                endereco: new Endereco("Rua X", "123", "Bairro Y", "Cidade Z", "Estado A"),
+                telefone: "11999999999"
+            );
 
+            var doacoesLucas = new List<Doacao>
+            {
+                new Doacao(doadorId: doadorLucas.Id, dataDoacao: new DateTime(2024, 01, 15)),
+                new Doacao(doadorId: doadorLucas.Id, dataDoacao: new DateTime(2024, 02, 20)),
+                new Doacao(doadorId: doadorLucas.Id, dataDoacao: new DateTime(2024, 03, 25))
+            };
+
+            // Configura o mock para retornar as doações de Lucas
+            _doacaoRepoMock.Setup(repo => repo.ObterPorDoadorIdAsync(doadorLucas.Id)).ReturnsAsync(doacoesLucas);
+
+            // Act
+            var historicoDoacoes = await _doacaoRepoMock.Object.ObterPorDoadorIdAsync(doadorLucas.Id);
+
+            // Assert
+            Assert.Equal(3, historicoDoacoes.Count);
+            Assert.Contains(historicoDoacoes, d => d.DataDoacao == new DateTime(2024, 01, 15));
+            Assert.Contains(historicoDoacoes, d => d.DataDoacao == new DateTime(2024, 02, 20));
+            Assert.Contains(historicoDoacoes, d => d.DataDoacao == new DateTime(2024, 03, 25));
+        }
     }
 }

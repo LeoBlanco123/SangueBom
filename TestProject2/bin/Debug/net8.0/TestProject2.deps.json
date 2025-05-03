@@ -9,6 +9,7 @@
       "TestProject2/1.0.0": {
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "17.8.0",
+          "Moq": "4.20.72",
           "SangueBom": "1.0.0",
           "TestProject1": "1.0.0",
           "bunit": "1.39.5",

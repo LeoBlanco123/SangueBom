@@ -1,189 +1,161 @@
 ﻿@page "/cadastro"
 @using DoadoresDeSangue.Domain.ValueObjects
-@using SangueBom.Domain.Interfaces
-@using SangueBom.Domain.ValueObjects
-@using SangueBom.Domain.Entities
 @using SangueBom.Domain.Enums
+@using SangueBom.Domain.Entities
+@using SangueBom.Domain.Interfaces
 @using SangueBom.Domain.Repositories
 @rendermode InteractiveServer
 
 @inject ICadastroDoadorRepositorio _repositorioDoador
 @inject IRepositorioDoacao _repositorioDoacao
 
-<link href="css/estilos.css" rel="stylesheet" />
+<link href="css/styleCadastro.css" rel="stylesheet" />
 
 <h3>Cadastro de Novo Doador</h3>
 
-<form>
-  <!-- Campos do Doador -->
-  <div class="form-group">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" class="form-control" @bind="Nome" />
-  </div>
+<form class="form-container">
+    <!-- Campos do Doador -->
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" class="form-control" @bind="Nome" />
+    </div>
 
-  <div class="form-group">
-    <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" class="form-control" @bind="CPF" />
-  </div>
+    <div class="form-group">
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" class="form-control" @bind="CPF" />
+    </div>
 
-  <div class="form-group">
-    <label for="dataNascimento">Data de Nascimento:</label>
-    <input type="date" id="dataNascimento" class="form-control" @bind="DataNascimento" />
-  </div>
+    <div class="form-group">
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" class="form-control" @bind="DataNascimento" />
+    </div>
 
-  <div class="form-group">
-    <label for="genero">Gênero:</label>
-    <select id="genero" class="form-control" @bind="GeneroSelecionado">
-      @foreach (var genero in Enum.GetValues<Genero>())
-      {
-        <option value="@genero">@genero</option>
-      }
-    </select>
-  </div>
+    <div class="form-group">
+        <label for="genero">Gênero:</label>
+        <select id="genero" class="form-control" @bind="GeneroSelecionado">
+            @foreach (var genero in Enum.GetValues<Genero>())
+            {
+                <option value="@genero">@genero</option>
+            }
+        </select>
+    </div>
 
-  <div class="form-group">
-    <label for="tipoSanguineo">Tipo Sanguíneo:</label>
-    <select id="tipoSanguineo" class="form-control" @bind="TipoSanguineo">
-      <option value="APositivo">A+</option>
-      <option value="ANegativo">A-</option>
-      <option value="BPositivo">B+</option>
-      <option value="BNegativo">B-</option>
-      <option value="OPositivo">O+</option>
-      <option value="ONegativo">O-</option>
-      <option value="ABPositivo">AB+</option>
-      <option value="ABNegativo">AB-</option>
-    </select>
-  </div>
+    <div class="form-group">
+        <label for="tipoSanguineo">Tipo Sanguíneo:</label>
+        <select id="tipoSanguineo" class="form-control" @bind="TipoSanguineo">
+            <option value="APositivo">A+</option>
+            <option value="ANegativo">A-</option>
+            <option value="BPositivo">B+</option>
+            <option value="BNegativo">B-</option>
+            <option value="OPositivo">O+</option>
+            <option value="ONegativo">O-</option>
+            <option value="ABPositivo">AB+</option>
+            <option value="ABNegativo">AB-</option>
+        </select>
+    </div>
 
-  <div class="form-group">
-    <label for="telefone">Telefone:</label>
-    <input type="tel" id="telefone" class="form-control"
-           @bind="Telefone"
-           oninput="this.value = this.value" />
-  </div>
+    <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" class="form-control" @bind="Telefone" />
+    </div>
 
-  <div class="form-group">
-    <label for="dataDoacao">Data da Doação:</label>
-    <input type="date" id="dataDoacao" class="form-control" @bind="DataDoacao" />
-  </div>
+    <div class="form-group-full">
+        <label for="dataDoacao">Data da Doação:</label>
+        <input type="date" id="dataDoacao" class="form-control" @bind="DataDoacao" />
+    </div>
 
-  <!-- Campos do Endereço -->
-  <h4>Endereço</h4>
-  <div class="form-group">
-    <label for="rua">Rua:</label>
-    <input type="text" id="rua" class="form-control" @bind="Rua" />
-  </div>
-  <div class="form-group">
-    <label for="numero">Número:</label>
-    <input type="text" id="numero" class="form-control" @bind="Numero" />
-  </div>
-  <div class="form-group">
-    <label for="bairro">Bairro:</label>
-    <input type="text" id="bairro" class="form-control" @bind="Bairro" />
-  </div>
-  <div class="form-group">
-    <label for="cidade">Cidade:</label>
-    <input type="text" id="cidade" class="form-control" @bind="Cidade" />
-  </div>
-  <div class="form-group">
-    <label for="estado">Estado:</label>
-    <input type="text" id="estado" class="form-control" @bind="Estado" />
-  </div>
+    <!-- Campos do Endereço -->
+    <h4>Endereço</h4>
+    <div class="form-group">
+        <label for="rua">Rua:</label>
+        <input type="text" id="rua" class="form-control" @bind="Rua" />
+    </div>
+    <div class="form-group">
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" class="form-control" @bind="Numero" />
+    </div>
+    <div class="form-group">
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" class="form-control" @bind="Bairro" />
+    </div>
+    <div class="form-group">
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" class="form-control" @bind="Cidade" />
+    </div>
+    <div class="form-group">
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" class="form-control" @bind="Estado" />
+    </div>
 
-  <button type="button" class="btn btn-success" @onclick="CadastrarDoador">
-    Cadastrar
-  </button>
-  <NavLink href="/doadores" class="btn btn-primary">
-    Lista de Doadores
-  </NavLink>
+    <button type="button" class="btn btn-success" @onclick="CadastrarDoador">Cadastrar</button>
+    <NavLink href="/doadores" class="btn btn-primary">Lista de Doadores</NavLink>
 
-  @if (!string.IsNullOrEmpty(Mensagem))
-  {
-    <p class="@MensagemClasseCss">@Mensagem</p>
-  }
+    @if (!string.IsNullOrEmpty(Mensagem))
+    {
+        <p class="@MensagemClasseCss">@Mensagem</p>
+    }
 </form>
 
 @code {
-  // Dados do Doador
-  private string Nome { get; set; }
-  private string CPF { get; set; }
-  private DateTime DataNascimento { get; set; } = DateTime.Today;
-  private Genero GeneroSelecionado { get; set; }
-  private string TipoSanguineo { get; set; }
-  private string Telefone { get; set; }
+    private string Nome { get; set; }
+    private string CPF { get; set; }
+    private DateTime DataNascimento { get; set; } = DateTime.Today.AddYears(-18);
+    private Genero GeneroSelecionado { get; set; } = Genero.Masculino;
+    private string TipoSanguineo { get; set; } = "OPositivo";
+    private string Telefone { get; set; }
+    private DateTime DataDoacao { get; set; } = DateTime.Today;
+    private string Rua { get; set; }
+    private string Numero { get; set; }
+    private string Bairro { get; set; }
+    private string Cidade { get; set; }
+    private string Estado { get; set; }
+    private string Mensagem { get; set; }
+    private string MensagemClasseCss { get; set; }
 
-  // Data da doação
-  private DateTime DataDoacao { get; set; } = DateTime.Today;
-
-  // Endereço
-  private string Rua { get; set; }
-  private string Numero { get; set; }
-  private string Bairro { get; set; }
-  private string Cidade { get; set; }
-  private string Estado { get; set; }
-
-  // Estado de UI
-  private Doador DoadorCriado;
-  private string Mensagem { get; set; }
-  private string MensagemClasseCss { get; set; }
-
-  private async Task CadastrarDoador()
-  {
-    try
+    private async Task CadastrarDoador()
     {
-      // 1) Validação de telefone
-      var telefoneRegex = new System.Text.RegularExpressions.Regex(@"^\(\d{2}\) \d{5}-\d{4}$");
-      if (!telefoneRegex.IsMatch(Telefone))
-        throw new ArgumentException("Telefone inválido. Use o formato (11) 99999-9999.");
+        try
+        {
+            if (string.IsNullOrEmpty(Nome)) throw new ArgumentException("O nome é obrigatório.");
+            if (string.IsNullOrEmpty(CPF)) throw new ArgumentException("O CPF é obrigatório.");
+            if (string.IsNullOrEmpty(Telefone)) throw new ArgumentException("O telefone é obrigatório.");
+            if (string.IsNullOrEmpty(Rua)) throw new ArgumentException("A rua é obrigatória.");
+            if (string.IsNullOrEmpty(Cidade)) throw new ArgumentException("A cidade é obrigatória.");
+            if (string.IsNullOrEmpty(Estado)) throw new ArgumentException("O estado é obrigatório.");
 
-      // 2) Validação de nome
-      if (string.IsNullOrWhiteSpace(Nome) ||
-          !System.Text.RegularExpressions.Regex.IsMatch(Nome, @"^[a-zA-ZÀ-ÿ\s]+$"))
-        throw new ArgumentException("O nome deve conter apenas letras e espaços.");
+            var telefoneRegex = new System.Text.RegularExpressions.Regex(@"^\(\d{2}\) \d{5}-\d{4}$");
+            if (!telefoneRegex.IsMatch(Telefone))
+                throw new ArgumentException("Telefone inválido. Use o formato (11) 99999-9999.");
 
-      // 3) Validação de CPF
-      var cpfLimpo = CPF.Replace(".", "").Replace("-", "").Replace(" ", "");
-      var cpfObj = new CPF(cpfLimpo);
-      if (await _repositorioDoador.ObterPorCpfAsync(cpfObj.Valor) != null)
-        throw new ArgumentException("CPF já cadastrado.");
+            var cpfLimpo = CPF.Replace(".", "").Replace("-", "").Replace(" ", "");
+            var cpfObj = new CPF(cpfLimpo);
+            if (await _repositorioDoador.ObterPorCpfAsync(cpfObj.Valor) != null)
+                throw new ArgumentException("CPF já cadastrado.");
 
-      // 4) Validação de idade mínima
-      var idade = DateTime.Today.Year - DataNascimento.Year;
-      if (DataNascimento > DateTime.Today.AddYears(-idade)) idade--;
-      if (idade < 18)
-        throw new ArgumentException("O doador deve ter pelo menos 18 anos.");
+            var idade = DateTime.Today.Year - DataNascimento.Year;
+            if (DataNascimento > DateTime.Today.AddYears(-idade)) idade--;
+            if (idade < 18)
+                throw new ArgumentException("O doador deve ter pelo menos 18 anos.");
 
-      // 5) Criação do Doador e cadastro
-      var tipoEnum = Enum.Parse<TipoSanguineo>(
-        TipoSanguineo.Replace("+", "Positivo").Replace("-", "Negativo"));
-      var endereco = new Endereco(Rua, Numero, Bairro, Cidade, Estado);
+            var tipoEnum = Enum.Parse<TipoSanguineo>(TipoSanguineo.Replace("+", "Positivo").Replace("-", "Negativo"));
+            var endereco = new Domain.ValueObjects.Endereco(Rua, Numero, Bairro, Cidade, Estado);
+            var doador = new Doador(Nome, cpfObj, DataNascimento, GeneroSelecionado, tipoEnum, endereco, Telefone);
 
-      DoadorCriado = new Doador(
-        Nome, cpfObj, DataNascimento, GeneroSelecionado, tipoEnum, endereco, Telefone);
+            await _repositorioDoador.CadastrarAsync(doador);
 
-      await _repositorioDoador.CadastrarAsync(DoadorCriado);
+            if (DataDoacao > DateTime.Today)
+                throw new ArgumentException("A data da doação não pode ser futura.");
 
-      // 6) Validação de data de doação
-      if (DataDoacao > DateTime.Today)
-        throw new ArgumentException("A data da doação não pode ser futura.");
+            var doacao = new Doacao(doador.Id, DataDoacao);
+            await _repositorioDoacao.RegistrarAsync(doacao);
 
-      // 7) Criação e registro da Doação
-      var doacao = new Doacao(DoadorCriado.Id, DataDoacao);
-      await _repositorioDoacao.RegistrarAsync(doacao);
-
-      // 8) Sucesso
-      Mensagem = $"Doador e doação registrados com sucesso: {DoadorCriado.Nome}";
-      MensagemClasseCss = "text-success";
+            Mensagem = $"Doador e doação registrados com sucesso";
+            MensagemClasseCss = "text-success";
+        }
+        catch (Exception ex)
+        {
+            Mensagem = $"Erro: {ex.Message}";
+            MensagemClasseCss = "text-danger";
+        }
     }
-    catch (ArgumentException ex)
-    {
-      Mensagem = ex.Message;
-      MensagemClasseCss = "text-danger";
-    }
-    catch (Exception ex)
-    {
-      Mensagem = $"Erro ao cadastrar: {ex.Message}";
-      MensagemClasseCss = "text-danger";
-    }
-  }
 }

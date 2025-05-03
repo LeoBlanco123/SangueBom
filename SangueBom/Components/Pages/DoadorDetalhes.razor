@@ -1,15 +1,19 @@
 ﻿@page "/doadores"
 @using SangueBom.Domain.Entities
 @using SangueBom.Domain.Interfaces
-@using SangueBom.Domain.Services
+@using SangueBom.Domain.Enums
 @using SangueBom.Domain.Repositories
+@using SangueBom.Domain.Services
 
 @inject ICadastroDoadorRepositorio DoadorRepo
 @inject IRepositorioDoacao DoacaoRepo
+@inject NavigationManager NavigationManager
 
 @rendermode InteractiveServer
 
-<h3>Detalhes dos Doadores</h3>
+<link href="css/styleDetalhes.css" rel="stylesheet" />
+
+<h3 class="title">Detalhes dos Doadores</h3>
 
 @if (!string.IsNullOrEmpty(GlobalMensagem))
 {
@@ -18,11 +22,12 @@
 
 @if (doadores == null)
 {
-    <p>Carregando...</p>
+    <p class="loading-message">Carregando...</p>
 }
-else if (doadores.Count == 0)
+else if (!doadores.Any())
 {
-    <p>Nenhum doador encontrado.</p>
+    <p class="empty-message">Nenhum doador encontrado.</p>
+    <button class="btn-back" @onclick="VoltarAoCadastro">Voltar ao Cadastro</button>
 }
 else
 {
@@ -43,59 +48,116 @@ else
                     <td>@doador.Cpf.Valor</td>
                     <td>@doador.Telefone</td>
                     <td>
-                        <button class="btn btn-sm btn-primary"
-                                @onclick="() => RegistrarNovaDoacao(doador)">
-                            Registrar nova doação
+                        <button class="btn-primary"
+                                @onclick="() => ExibirDetalhesDoacoes(doador)">
+                            Ver Detalhes
                         </button>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
+    <button class="btn-back" @onclick="VoltarAoCadastro">Voltar ao Cadastro</button>
+}
+
+@if (doadorSelecionado != null)
+{
+    <div class="details">
+        <h4>Detalhes de Doações - @doadorSelecionado.Nome</h4>
+
+        @if (historicoDoacoes == null || !historicoDoacoes.Any())
+        {
+            <p class="empty-message">Não há doações registradas.</p>
+        }
+        else
+        {
+            <ul class="donation-list">
+                @foreach (var doacao in historicoDoacoes)
+                {
+                    <li>Data: @doacao.DataDoacao.ToString("dd/MM/yyyy")</li>
+                }
+            </ul>
+        }
+
+        <button class="btn-success" @onclick="() => RegistrarNovaDoacao(doadorSelecionado)">
+            Registrar Nova Doação
+        </button>
+
+    </div>
 }
 
 @code {
     private List<Doador> doadores;
+    private List<Doacao> historicoDoacoes;
+    private Doador doadorSelecionado;
     private string GlobalMensagem;
     private string GlobalMensagemCss;
     private readonly ValidadorDeDoacaoService _validador = new();
 
     protected override async Task OnInitializedAsync()
     {
-        doadores = await DoadorRepo.ListarAsync();
+        try
+        {
+            doadores = await DoadorRepo.ListarAsync();
+        }
+        catch (Exception ex)
+        {
+            MostrarMensagem("Erro ao carregar a lista de doadores: " + ex.Message, "alert-danger");
+        }
+    }
+
+    private async Task ExibirDetalhesDoacoes(Doador doador)
+    {
+        try
+        {
+            doadorSelecionado = doador;
+            historicoDoacoes = await DoacaoRepo.ObterPorDoadorIdAsync(doador.Id);
+        }
+        catch (Exception ex)
+        {
+            MostrarMensagem("Erro ao carregar histórico de doações: " + ex.Message, "alert-danger");
+        }
     }
 
     private async Task RegistrarNovaDoacao(Doador doador)
     {
-        // Buscar última doação
-        var historico = await DoacaoRepo.ObterPorDoadorIdAsync(doador.Id);
-        DateTime? dataUltima = historico
-            .OrderByDescending(d => d.DataDoacao)
-            .FirstOrDefault()?.DataDoacao;
-
-        var hoje = DateTime.Today;
-        bool pode = _validador.PodeRealizarDoacao(doador, dataUltima, hoje);
-
-        if (pode)
+        try
         {
-            // registra hoje
-            var nova = new Doacao(doador.Id, hoje);
-            await DoacaoRepo.RegistrarAsync(nova);
-            GlobalMensagem = "Doação registrada com sucesso";
-            GlobalMensagemCss = "alert-success";
-        }
-        else
-        {
-            // Mensagem de intervalo
-            int diasPassados = dataUltima.HasValue
-                ? (int)(hoje - dataUltima.Value).TotalDays
-                : 0;
-            int minimo = doador.Genero == Domain.Enums.Genero.Masculino ? 60 : 90;
-            GlobalMensagem = $"Intervalo mínimo de {minimo} dias ainda não cumprido ({diasPassados} dias)";
-            GlobalMensagemCss = "alert-warning";
-        }
+            var historico = await DoacaoRepo.ObterPorDoadorIdAsync(doador.Id);
+            DateTime? dataUltima = historico.OrderByDescending(d => d.DataDoacao).FirstOrDefault()?.DataDoacao;
 
-        // Recarrega histórico caso queira atualizar contadores
-        // await OnInitializedAsync();
+            var hoje = DateTime.Today;
+            if (_validador.PodeRealizarDoacao(doador, dataUltima, hoje))
+            {
+                var novaDoacao = new Doacao(doador.Id, hoje);
+                await DoacaoRepo.RegistrarAsync(novaDoacao);
+
+                MostrarMensagem($"Nova doação registrada com sucesso em {hoje:dd/MM/yyyy}.", "alert-success");
+
+                historicoDoacoes = await DoacaoRepo.ObterPorDoadorIdAsync(doador.Id);
+            }
+            else
+            {
+                int diasRestantes = (dataUltima.HasValue ? (hoje - dataUltima.Value).Days : 0);
+                int intervaloMinimo = doador.Genero == Genero.Masculino ? 60 : 90;
+
+                MostrarMensagem($"Intervalo mínimo de {intervaloMinimo} dias ainda não cumprido ({diasRestantes} dias passados).", "alert-warning");
+            }
+        }
+        catch (Exception ex)
+        {
+            MostrarMensagem("Erro ao registrar a doação: " + ex.Message, "alert-danger");
+        }
+    }
+
+    private void MostrarMensagem(string mensagem, string cssClass)
+    {
+        GlobalMensagem = mensagem;
+        GlobalMensagemCss = cssClass;
+    }
+
+    private void VoltarAoCadastro()
+    {
+        NavigationManager.NavigateTo("/cadastro");
     }
 }

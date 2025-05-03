@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\TestProject2\\TestProject2.csproj": {}
+    "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\TestProject2\\TestProject2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj": {
+    "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj",
+        "projectUniqueName": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj",
         "projectName": "SangueBom",
-        "projectPath": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj",
-        "packagesPath": "C:\\Users\\RafaelaRosa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\SangueBom\\obj\\",
+        "projectPath": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj",
+        "packagesPath": "C:\\Users\\Leonardo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\RafaelaRosa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Leonardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -96,24 +96,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\TestProject1\\TestProject1.csproj": {
+    "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\TestProject1\\TestProject1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\TestProject1\\TestProject1.csproj",
+        "projectUniqueName": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\TestProject1\\TestProject1.csproj",
         "projectName": "TestProject1",
-        "projectPath": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\TestProject1\\TestProject1.csproj",
-        "packagesPath": "C:\\Users\\RafaelaRosa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\TestProject1\\obj\\",
+        "projectPath": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\TestProject1\\TestProject1.csproj",
+        "packagesPath": "C:\\Users\\Leonardo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\TestProject1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\RafaelaRosa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Leonardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -128,8 +128,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj": {
-                "projectPath": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj"
+              "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj": {
+                "projectPath": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj"
               }
             }
           }
@@ -189,24 +189,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\TestProject2\\TestProject2.csproj": {
+    "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\TestProject2\\TestProject2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\TestProject2\\TestProject2.csproj",
+        "projectUniqueName": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\TestProject2\\TestProject2.csproj",
         "projectName": "TestProject2",
-        "projectPath": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\TestProject2\\TestProject2.csproj",
-        "packagesPath": "C:\\Users\\RafaelaRosa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\TestProject2\\obj\\",
+        "projectPath": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\TestProject2\\TestProject2.csproj",
+        "packagesPath": "C:\\Users\\Leonardo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\TestProject2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\RafaelaRosa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Leonardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -221,11 +221,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj": {
-                "projectPath": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj"
+              "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj": {
+                "projectPath": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\SangueBom.csproj"
               },
-              "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\TestProject1\\TestProject1.csproj": {
-                "projectPath": "C:\\Users\\RafaelaRosa\\Source\\Repos\\SangueBom\\TestProject1\\TestProject1.csproj"
+              "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\TestProject1\\TestProject1.csproj": {
+                "projectPath": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\TestProject1\\TestProject1.csproj"
               }
             }
           }
@@ -249,6 +249,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.8.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
             },
             "bunit": {
               "target": "Package",
@@ -293,7 +297,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

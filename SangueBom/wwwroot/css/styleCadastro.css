@@ -1,0 +1,130 @@
+﻿/* Estilos Gerais para o Formulário de Cadastro */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+h4 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.form-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Definindo 3 colunas */
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group label {
+        font-size: 1rem;
+        color: #333;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fafafa;
+}
+
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    input[type="date"]:focus,
+    select:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+/* Ajustando para campos que ocupam mais de uma linha */
+.form-group-full {
+    grid-column: span 3;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    grid-column: span 3; /* Botão ocupa toda a linha */
+}
+
+    button:hover {
+        background-color: #218838;
+    }
+
+.NavLink {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    grid-column: span 3; /* Link ocupa toda a linha */
+}
+
+    .NavLink:hover {
+        background-color: #0056b3;
+    }
+
+.text-success {
+    color: #28a745;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    grid-column: span 3;
+}
+
+.text-danger {
+    color: #dc3545;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    grid-column: span 3;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        grid-template-columns: 1fr; /* Para telas menores, os campos ficam em uma coluna */
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}

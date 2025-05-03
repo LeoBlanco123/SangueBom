@@ -1,5 +1,7 @@
 wwwroot\app.css
 wwwroot\bootstrap\bootstrap.min.css
 wwwroot\bootstrap\bootstrap.min.css.map
-wwwroot\css\style.css
+wwwroot\css\styleCadastro.css
+wwwroot\css\styleDetalhes.css
+wwwroot\css\styleHome.css
 wwwroot\favicon.png

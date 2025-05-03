@@ -7,6 +7,11 @@ namespace SangueBom.Infrastructure.Repositories
     {
         private readonly List<Doador> _doadores = new();
 
+        public Task AdicionarAsync(Doador doador)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task CadastrarAsync(Doador doador)
         {
             _doadores.Add(doador);
@@ -22,6 +27,11 @@ namespace SangueBom.Infrastructure.Repositories
         {
             var doador = _doadores.FirstOrDefault(d => d.Cpf.Valor == cpf);
             return Task.FromResult(doador);
+        }
+
+        public Task<List<Doacao>> ObterPorDoadorIdAsync(Guid doadorId)
+        {
+            throw new NotImplementedException();
         }
 
         public Task<Doador> ObterPorIdAsync(Guid doadorId)

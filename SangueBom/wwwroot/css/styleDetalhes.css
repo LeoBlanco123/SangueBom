@@ -1,0 +1,158 @@
+﻿/* Estilos Gerais para a Página de Detalhes dos Doadores */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+h3.title {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.alert-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.alert-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.alert-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+.loading-message,
+.empty-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .table th, .table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table th {
+        background-color: #007bff;
+        color: white;
+        font-size: 1.1rem;
+    }
+
+    .table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .table td button {
+        padding: 8px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+    }
+
+        .table td button:hover {
+            background-color: #0056b3;
+        }
+
+/* Detalhes de Doações */
+.details {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .details h4 {
+        color: #333;
+        font-size: 1.5rem;
+    }
+
+.donation-list {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+    .donation-list li {
+        padding: 8px 0;
+        font-size: 1.1rem;
+        color: #555;
+    }
+
+button.btn-success {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button.btn-success:hover {
+        background-color: #218838;
+    }
+
+/* Estilo para o botão Voltar ao Cadastro */
+.btn-back {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff; /* Cor azul */
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+    .btn-back:hover {
+        background-color: #0056b3; /* Cor azul mais escura no hover */
+        transform: scale(1.05); /* Efeito de aumento de tamanho ao passar o mouse */
+    }
+
+    .btn-back:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efeito de foco com sombra */
+    }
+
+    .btn-back:active {
+        background-color: #004085; /* Cor de fundo mais escura quando pressionado */
+        transform: scale(1); /* Retorna ao tamanho normal quando pressionado */
+    }

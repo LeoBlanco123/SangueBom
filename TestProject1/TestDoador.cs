@@ -12,7 +12,7 @@ using SangueBom.Application.Services;
 using DoadoresDeSangue.Domain.ValueObjects;
 using SangueBom.Domain.ValueObjects;
 using System.Security.Cryptography.Xml;
-
+using SangueBom.Domain.Repositories;
 
 namespace TestProject1
 {
@@ -35,8 +35,9 @@ namespace TestProject1
         [Fact]
         public void DeveExibirTodosOsCamposDoFormularioDeCadastro()
         {
-            // Arrange: Simula repositório necessário
+            // Arrange: Registra todos os serviços necessários, incluindo repositórios
             Services.AddScoped<ICadastroDoadorRepositorio, CadastroDoadorRepositorio>();
+            Services.AddScoped<IRepositorioDoacao, RepositorioDoacaoEmMemoria>(); // Garanta que o repositório está registrado
 
             // Renderiza componente
             var cadastroComponent = RenderComponent<Cadastro>();
@@ -45,7 +46,7 @@ namespace TestProject1
             Assert.NotNull(cadastroComponent.Find("input#nome"));
             Assert.NotNull(cadastroComponent.Find("input#cpf"));
             Assert.NotNull(cadastroComponent.Find("input#dataNascimento"));
-            Assert.NotNull(cadastroComponent.Find("select#tipoSanguineo")); // ← Aqui falha se o select não renderizar
+            Assert.NotNull(cadastroComponent.Find("select#tipoSanguineo"));
             Assert.NotNull(cadastroComponent.Find("input#rua"));
             Assert.NotNull(cadastroComponent.Find("input#numero"));
             Assert.NotNull(cadastroComponent.Find("input#bairro"));
@@ -55,12 +56,11 @@ namespace TestProject1
         }
 
         [Fact]
-       
-
         public async Task AoPreencherCamposValidos_EFormularioEhSubmetido_DeveExibirMensagemDeSucesso()
         {
-            // Arrange
+            // Arrange: Registra todos os serviços necessários
             Services.AddScoped<ICadastroDoadorRepositorio, CadastroDoadorRepositorio>();
+            Services.AddScoped<IRepositorioDoacao, RepositorioDoacaoEmMemoria>(); // Garanta que o repositório está registrado
 
             var cut = RenderComponent<Cadastro>();
 
@@ -75,12 +75,13 @@ namespace TestProject1
             cut.Find("#cidade").Change("São Paulo");
             cut.Find("#estado").Change("SP");
             cut.Find("#genero").Change("Masculino");
+            cut.Find("#telefone").Change("(11) 99999-9999"); // Corrigido para o formato correto de telefone
 
             await cut.InvokeAsync(() => cut.Find("button").Click());
 
             // Assert
             var mensagem = cut.Find("p").TextContent;
-            Assert.Equal("Doador cadastrado com sucesso: João da Silva", mensagem);
+            Assert.Equal("Doador e doação registrados com sucesso", mensagem);
         }
 
         [Fact]
@@ -169,7 +170,6 @@ namespace TestProject1
             Assert.Equal("CPF já cadastrado", servico.Mensagem);
         }
 
-
         [Fact]
         public void Deve_Calcular_Idade_Corretamente_AoCriarDoador()
         {
@@ -206,65 +206,73 @@ namespace TestProject1
             return idade;
         }
 
+        [Fact]
+        public void NaoDevePermitirCadastroDeMenorDe18Anos()
+        {
+            // Arrange
+            var dataNascimentoMenor = new DateTime(2010, 1, 1); // idade: 15 anos em 2025
+            var cpf = new CPF("935.411.347-80");
+            var endereco = new Endereco("Rua X", "123", "Centro", "São Paulo", "SP");
 
-      
-            [Fact]
-            public void NaoDevePermitirCadastroDeMenorDe18Anos()
-            {
-                // Arrange
-                var dataNascimentoMenor = new DateTime(2010, 1, 1); // idade: 15 anos em 2025
-                var cpf = new CPF("935.411.347-80");
-                var endereco = new Endereco("Rua X", "123", "Centro", "São Paulo", "SP");
+            // Act & Assert
+            var ex = Assert.Throws<ArgumentException>(() =>
+                new Doador(
+                    nome: "Pedro Menor",
+                    cpf: cpf,
+                    dataNascimento: dataNascimentoMenor,
+                    genero: Genero.Masculino,
+                    tipoSanguineo: TipoSanguineo.OPositivo,
+                    endereco: endereco,
+                    telefone: "11999999999"
+                )
+            );
 
-                // Act & Assert
-                var ex = Assert.Throws<ArgumentException>(() =>
-                    new Doador(
-                        nome: "Pedro Menor",
-                        cpf: cpf,
-                        dataNascimento: dataNascimentoMenor,
-                        genero: Genero.Masculino,
-                        tipoSanguineo: TipoSanguineo.OPositivo,
-                        endereco: endereco,
-                        telefone: "11999999999"
-                    )
-                );
-
-                Assert.Equal("Doador deve ter 18 anos ou mais.", ex.Message);
-            }
+            Assert.Equal("Doador deve ter 18 anos ou mais.", ex.Message);
+        }
 
         [Fact]
         public void CamposDevemTerTiposCorretosEFormatacao()
         {
-            // Arrange: simula repositório injetável
-            var mock = new Mock<ICadastroDoadorRepositorio>();
-            Services.AddSingleton(mock.Object);
+            // Arrange: Simula repositório injetável
+            var mockCadastro = new Mock<ICadastroDoadorRepositorio>();
+            var mockDoacao = new Mock<IRepositorioDoacao>();  // Mock do IRepositorioDoacao
 
-            var cut = RenderComponent<Cadastro>();
+            // Cria o contexto de teste e adiciona os mocks necessários
+            var testContext = new TestContext();
+            testContext.Services.AddSingleton(mockCadastro.Object);  // Registro do mock de ICadastroDoadorRepositorio
+            testContext.Services.AddSingleton(mockDoacao.Object);    // Registro do mock de IRepositorioDoacao
+
+            // Renderiza o componente Cadastro no contexto de teste
+            var cut = testContext.RenderComponent<Cadastro>();
 
             // Assert: Verifica tipos e estrutura dos campos
 
+            // Verifica o tipo do campo de nome
             var nomeInput = cut.Find("input#nome");
             Assert.Equal("text", nomeInput.GetAttribute("type"));
 
+            // Verifica o tipo do campo de CPF
             var cpfInput = cut.Find("input#cpf");
             Assert.Equal("text", cpfInput.GetAttribute("type"));
 
+            // Verifica o tipo do campo de data de nascimento
             var dataInput = cut.Find("input#dataNascimento");
             Assert.Equal("date", dataInput.GetAttribute("type"));
 
+            // Verifica as opções no select de tipo sanguíneo
             var tipoSanguineoSelect = cut.Find("select#tipoSanguineo");
             var opcoes = tipoSanguineoSelect.Children;
             Assert.Contains(opcoes, opt => opt.TextContent.Contains("A+"));
             Assert.Contains(opcoes, opt => opt.TextContent.Contains("O-"));
 
+            // Verifica se o select de gênero está presente
             var generoSelect = cut.Find("select#genero");
             Assert.NotNull(generoSelect);
 
+            // Verifica o tipo do campo de telefone
             var telefoneInput = cut.Find("input#telefone");
-            Assert.Equal("tel", telefoneInput.GetAttribute("type")); 
+            Assert.Equal("tel", telefoneInput.GetAttribute("type"));
         }
+
     }
 }
-
-    
-
