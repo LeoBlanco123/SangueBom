@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Leonardo\\source\\repos\\SangueBom\\",
+  "WorkspaceRootPath": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|c:\\users\\leonardo\\source\\repos\\sanguebom\\sanguebom\\components\\pages\\cadastro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|c:\\users\\rafaelarosa\\source\\repos\\sanguebom\\sanguebom\\components\\pages\\cadastro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|solutionrelative:sanguebom\\components\\pages\\cadastro.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|c:\\users\\rafaelarosa\\source\\repos\\sanguebom\\sanguebom\\components\\pages\\doadordetalhes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|solutionrelative:sanguebom\\components\\pages\\doadordetalhes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|c:\\users\\rafaelarosa\\source\\repos\\sanguebom\\sanguebom\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{756ADA8A-A358-40CA-BF3F-A37FD9168594}|SangueBom\\SangueBom.csproj|solutionrelative:sanguebom\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,13 +38,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "SangueBom\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "SangueBom\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T13:48:36.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoadorDetalhes.razor",
+              "DocumentMoniker": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\Components\\Pages\\DoadorDetalhes.razor",
+              "RelativeDocumentMoniker": "SangueBom\\Components\\Pages\\DoadorDetalhes.razor",
+              "ToolTip": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\Components\\Pages\\DoadorDetalhes.razor",
+              "RelativeToolTip": "SangueBom\\Components\\Pages\\DoadorDetalhes.razor",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAADEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T13:10:13.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Cadastro.razor",
-              "DocumentMoniker": "C:\\Users\\Leonardo\\source\\repos\\SangueBom\\SangueBom\\Components\\Pages\\Cadastro.razor",
+              "DocumentMoniker": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\Components\\Pages\\Cadastro.razor",
               "RelativeDocumentMoniker": "SangueBom\\Components\\Pages\\Cadastro.razor",
-              "ToolTip": "C:\\Users\\Leonardo\\source\\repos\\SangueBom\\SangueBom\\Components\\Pages\\Cadastro.razor",
+              "ToolTip": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\Components\\Pages\\Cadastro.razor",
               "RelativeToolTip": "SangueBom\\Components\\Pages\\Cadastro.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-03T19:20:05.981Z",
               "EditorCaption": ""
