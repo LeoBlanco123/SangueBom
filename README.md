@@ -1,7 +1,7 @@
 
 # 🩸 SangueBom
 
-**SangueBom** é uma aplicação web desenvolvida com ASP.NET Core MVC, voltada para o gerenciamento de doações de sangue. O sistema contempla o cadastro de doadores, campanhas de doação e o registro de doações realizadas, com foco em escalabilidade, organização em camadas e boas práticas de desenvolvimento.
+**SangueBom** é uma aplicação web desenvolvida com ASP.NET Core, voltada para o gerenciamento de doações de sangue. O sistema contempla o cadastro de doadores, campanhas de doação e o registro de doações realizadas, com foco em escalabilidade, organização em camadas e boas práticas de desenvolvimento baseadas no DDD (Domain-Driven Design).
 
 ## 🎯 Objetivos do Projeto
 
@@ -11,22 +11,12 @@
 
 ## 🧰 Stack Tecnológica
 
-- **.NET 6+ / ASP.NET Core MVC** – Backend estruturado em camadas (Domain, Application, Infrastructure).
+- **.NET 6+ / ASP.NET Core** – Backend estruturado em camadas (Domain, Application, Infrastructure).
 - **Entity Framework Core** – ORM para mapeamento objeto-relacional.
 - **xUnit** – Testes automatizados de unidade.
 - **Razor Pages** – Interface web leve e integrada ao ASP.NET.
 - **C# 10+** – Linguagem principal do backend.
 
-## 🗂️ Estrutura do Projeto
-
-```
-SangueBom/
-├── SangueBom/                # Camadas Domain, Application e Infrastructure
-├── SangueBom.Client/         # Interface em Razor Pages ou Blazor (dependendo da implementação)
-├── SangueBom.Tests/          # Projeto de testes automatizados com xUnit
-├── SangueBom.sln             # Arquivo de solução do Visual Studio
-└── .gitignore                # Arquivo de controle de versão
-```
 
 ## 🧪 Testes
 
@@ -66,11 +56,7 @@ A aplicação estará disponível em `https://localhost:5001` (ou conforme confi
 - **DDD (Domain-Driven Design)** básico com separação clara entre camadas.
 - **Repository Pattern** para acesso a dados.
 - **Value Objects** para validações ricas de domínio (ex: CPF).
-- **Test-Driven Development** para regras críticas de negócio.
-
-## 📃 Licença
-
-Projeto licenciado sob a [MIT License](LICENSE).
+- **TDD (Test-Driven Development)** para regras críticas de negócio.
 
 ---
 
