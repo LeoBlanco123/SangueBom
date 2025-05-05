@@ -4,6 +4,9 @@
 @using SangueBom.Domain.Entities
 @using SangueBom.Domain.Interfaces
 @using SangueBom.Domain.Repositories
+@using System.Text.RegularExpressions;
+
+
 @rendermode InteractiveServer
 
 @inject ICadastroDoadorRepositorio _repositorioDoador
@@ -87,8 +90,8 @@
         <input type="text" id="estado" class="form-control" @bind="Estado" />
     </div>
 
-    <button type="button" class="btn btn-success" @onclick="CadastrarDoador">Cadastrar</button>
-    <NavLink href="/doadores" class="btn btn-primary">Lista de Doadores</NavLink>
+    <button id="button_cadastrar" type="button" class="btn btn-success" @onclick="CadastrarDoador">Cadastrar</button>
+    <NavLink id="nav_lista_doadores" href="/doadores" class="btn btn-primary">Lista de Doadores</NavLink>
 
     @if (!string.IsNullOrEmpty(Mensagem))
     {
@@ -116,7 +119,9 @@
     {
         try
         {
-            if (string.IsNullOrEmpty(Nome)) throw new ArgumentException("O nome é obrigatório.");
+            if (string.IsNullOrWhiteSpace(Nome) || !Regex.IsMatch(Nome, @"^[a-zA-ZÀ-ÿ\s]+$"))
+                throw new ArgumentException("O nome deve conter apenas letras e espaços.");
+
             if (string.IsNullOrEmpty(CPF)) throw new ArgumentException("O CPF é obrigatório.");
             if (string.IsNullOrEmpty(Telefone)) throw new ArgumentException("O telefone é obrigatório.");
             if (string.IsNullOrEmpty(Rua)) throw new ArgumentException("A rua é obrigatória.");

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VFVa/QxAjqjb/iHEd06TheKQ8spuKpRrZ/mz12IJgFA=",
+  "Hash": "dLpthfHUyHJskusnfeO9DUtYuuB04hTahwcaipW+PyQ=",
   "Source": "SangueBom",
   "BasePath": "_content/SangueBom",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "SangueBom\\wwwroot",
       "Source": "SangueBom",
-      "ContentRoot": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\",
       "BasePath": "_content/SangueBom",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Leonardo\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\AuthenticationService.js",
+      "Identity": "C:\\Users\\RafaelaRosa\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\AuthenticationService.js",
       "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Leonardo\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\RafaelaRosa\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
       "RelativePath": "AuthenticationService.js",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "Qlj6NGS978hjVyrYLtW5G6trKGerdW4Fwgvr2eUo/lU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Leonardo\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\AuthenticationService.js"
+      "OriginalItemSpec": "C:\\Users\\RafaelaRosa\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\AuthenticationService.js"
     },
     {
-      "Identity": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SangueBom.styles.css",
+      "Identity": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SangueBom.styles.css",
       "SourceId": "SangueBom",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/SangueBom",
       "RelativePath": "SangueBom#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "CeP3SG9p9q5ZOnhMrtk4VYhoSn2ovHdRiYUH7/KiOIg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SangueBom.styles.css"
+      "OriginalItemSpec": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SangueBom.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SangueBom.bundle.scp.css",
+      "Identity": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SangueBom.bundle.scp.css",
       "SourceId": "SangueBom",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/SangueBom",
       "RelativePath": "SangueBom#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -77,13 +77,13 @@
       "Integrity": "CeP3SG9p9q5ZOnhMrtk4VYhoSn2ovHdRiYUH7/KiOIg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SangueBom.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SangueBom.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\app.css",
       "SourceId": "SangueBom",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\",
       "BasePath": "_content/SangueBom",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "SangueBom",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\",
       "BasePath": "_content/SangueBom",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "SangueBom",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\",
       "BasePath": "_content/SangueBom",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleCadastro.css",
+      "Identity": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleCadastro.css",
       "SourceId": "SangueBom",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\",
       "BasePath": "_content/SangueBom",
       "RelativePath": "css/styleCadastro#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\css\\styleCadastro.css"
     },
     {
-      "Identity": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleDetalhes.css",
+      "Identity": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleDetalhes.css",
       "SourceId": "SangueBom",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\",
       "BasePath": "_content/SangueBom",
       "RelativePath": "css/styleDetalhes#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\css\\styleDetalhes.css"
     },
     {
-      "Identity": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleHome.css",
+      "Identity": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleHome.css",
       "SourceId": "SangueBom",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\",
       "BasePath": "_content/SangueBom",
       "RelativePath": "css/styleHome#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\css\\styleHome.css"
     },
     {
-      "Identity": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\favicon.png",
       "SourceId": "SangueBom",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\",
       "BasePath": "_content/SangueBom",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -230,7 +230,7 @@
   "Endpoints": [
     {
       "Route": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js",
-      "AssetFile": "C:\\Users\\Leonardo\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\AuthenticationService.js",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.11\\staticwebassets\\AuthenticationService.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -267,7 +267,7 @@
     },
     {
       "Route": "app.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -288,7 +288,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -304,7 +304,7 @@
     },
     {
       "Route": "app.da95v2qkru.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -325,7 +325,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -349,7 +349,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -370,7 +370,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -394,7 +394,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -415,7 +415,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -431,7 +431,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -452,7 +452,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -476,7 +476,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -497,7 +497,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -513,7 +513,7 @@
     },
     {
       "Route": "css/styleCadastro.4q4n2luvay.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleCadastro.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleCadastro.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -534,7 +534,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 19:55:18 GMT"
+          "Value": "Mon, 05 May 2025 12:18:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -558,7 +558,7 @@
     },
     {
       "Route": "css/styleCadastro.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleCadastro.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleCadastro.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -579,7 +579,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 19:55:18 GMT"
+          "Value": "Mon, 05 May 2025 12:18:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -595,7 +595,7 @@
     },
     {
       "Route": "css/styleDetalhes.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleDetalhes.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleDetalhes.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -616,7 +616,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 20:09:39 GMT"
+          "Value": "Mon, 05 May 2025 12:18:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -632,7 +632,7 @@
     },
     {
       "Route": "css/styleDetalhes.dpglquru2z.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleDetalhes.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleDetalhes.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -653,7 +653,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 20:09:39 GMT"
+          "Value": "Mon, 05 May 2025 12:18:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -677,7 +677,7 @@
     },
     {
       "Route": "css/styleHome.9w8ltm6e5g.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleHome.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleHome.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -698,7 +698,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 19:55:11 GMT"
+          "Value": "Mon, 05 May 2025 12:18:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -722,7 +722,7 @@
     },
     {
       "Route": "css/styleHome.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleHome.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\css\\styleHome.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -743,7 +743,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 19:55:11 GMT"
+          "Value": "Mon, 05 May 2025 12:18:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -759,7 +759,7 @@
     },
     {
       "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -780,7 +780,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -804,7 +804,7 @@
     },
     {
       "Route": "favicon.png",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -825,7 +825,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -841,7 +841,7 @@
     },
     {
       "Route": "SangueBom.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SangueBom.bundle.scp.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SangueBom.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -862,7 +862,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -878,7 +878,7 @@
     },
     {
       "Route": "SangueBom.h23ahh2wux.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SangueBom.bundle.scp.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SangueBom.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -899,7 +899,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -923,7 +923,7 @@
     },
     {
       "Route": "SangueBom.h23ahh2wux.styles.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SangueBom.styles.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SangueBom.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -944,7 +944,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -968,7 +968,7 @@
     },
     {
       "Route": "SangueBom.styles.css",
-      "AssetFile": "C:\\Users\\Leonardo\\Source\\Repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SangueBom.styles.css",
+      "AssetFile": "C:\\Users\\RafaelaRosa\\source\\repos\\SangueBom\\SangueBom\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SangueBom.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -989,7 +989,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 18:02:16 GMT"
+          "Value": "Thu, 01 May 2025 13:33:31 GMT"
         },
         {
           "Name": "Cache-Control",
