@@ -1,0 +1,24 @@
+# Arquivos de Build e Binários
+/bin/
+/obj/
+*.sln.user
+*.vspscc
+*.vssscc
+*.suo
+
+# Arquivos de IDE
+.vs/
+.idea/
+
+# Logs e Arquivos de Configuração
+*.log
+*.tmp
+*.cache
+*.bak
+
+# Arquivos de Configuração de Visual Studio
+.settings/
+
+# Outros
+/packages/
+/artifacts/
